@@ -34,11 +34,6 @@ void initScene(Scene &scene) {
     scene.addSphere(Sphere{{2.2, 0.5, 9}, 1.2, matteWhite});
     scene.addSphere(Sphere{{4, -1, 10}, 0.7, metallicRed});
 
-    scene.addSphere(Sphere{{1.5, -0.5 + 0.2, 7}, 10, transparentGreen});
-    scene.addSphere(Sphere{{-2, -1 + 0.2, 6}, 5, metallicYellow});
-    scene.addSphere(Sphere{{2.2, 0.5 + 0.2, 9}, 4, matteWhite});
-    scene.addSphere(Sphere{{4, -1 + 0.2, 10}, 3, metallicRed});
-
     scene.addLight(PointLight{{-15, 0, -15}, white});
     scene.addLight(PointLight{{1, 1, 0}, blue});
     scene.addLight(PointLight{{0, -10, 6}, red});
@@ -150,8 +145,8 @@ public:
 
 int main(int argc, char **argv) 
 {
-    int viewPlaneResolutionX = (argc > 1 ? std::stoi(argv[1]) : 2560);
-    int viewPlaneResolutionY = (argc > 2 ? std::stoi(argv[2]) : 1440);
+    int viewPlaneResolutionX = (argc > 1 ? std::stoi(argv[1]) : 600);
+    int viewPlaneResolutionY = (argc > 2 ? std::stoi(argv[2]) : 600);
     std::string sceneFile = (argc > 4 ? argv[4] : "");
 
     Scene scene;
